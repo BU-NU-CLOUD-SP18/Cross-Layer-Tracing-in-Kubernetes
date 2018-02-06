@@ -12,14 +12,21 @@ We will be instrumenting the services section of Kubernetes with trace points su
 
 ## Solution Concept
 Below are the components of our design:
+
 ●	Container: A container provides an isolated environment with a unique namespace in which an app can run with its environment. Apps can only use the resources defined in this namespace.
 
 ●	Kubernetes: a container orchestrator, where tracing will be implemented.Kubernetes is an open-source platform designed to automate deploying, scaling, and operating application containers; a container deployment orchestrator.  
+
 ●	Tracing: Every request has Its own label, we name it as ‘TraceID’. When a specific  request call an API in a components of a system, we can create a event labeled by its ‘TraceID’. By collecting these events, we get a ‘thread’ of movement of  this specific request.
+
 ●	Jaeger: a distributed tracing used for monitoring microservices-based distributed systems.
+
 ●	Services: A microservice; an abstraction which defines a set of Kubernetes pods and a policy to access them.
+
 ●	Ingress: A collection of rules that allow inbound connections to reach the cluster services.
+
 ●	HotRod: a sample application that has had tracing implemented by Jaeger.
+
 ●	OSProfiler: Another tracing implementation that may be used.
 
 ## Acceptance Criteria
@@ -27,10 +34,11 @@ Implement end to end tracing for n number of requests to a distributed system co
 
 ## Release Planning
 Short Term Goals: 
+
 ●	Get Kubernetes on our laptops.
+
 ●	Create and run applications in containers
+
 ●	Implement HotRod using Jaeger. 
+
 ●	Tutorials on Kubernetes and Tracing.
-
-
-
