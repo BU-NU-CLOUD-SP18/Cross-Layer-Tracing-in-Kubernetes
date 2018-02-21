@@ -34,15 +34,6 @@ Three steps of tracing:
 
 ●	Ingress: A collection of rules that allow inbound connections to reach the cluster services.
 
-
-
-●	Jaeger: a distributed tracing used for monitoring microservices-based distributed systems.
-
-●	HotRod: a sample application that has had tracing implemented by Jaeger.
-
-●	OSProfiler: Another tracing implementation that may be used.
-
-
 ## Vision & Goals
 We will implement end-to-end tracing for Kubernetes on the data-plane. This includes instrumenting one or more subsystems within the Kubernetes structure. As data-plane features become a part of the flow and behavior of an application, implementing trace points within them allows for a cross-layer, enabling a complex and deeper understanding of an application’s behavior.  If issues come up in a distributed cluster operated by Kubernetes, tracing is an idea method to resolve said issues.
 
@@ -59,16 +50,27 @@ We will be instrumenting the services section of Kubernetes with trace points su
 
 4.Cloud providers and data centers
 
-## Acceptance Criteria
-Implement end to end tracing for n number of requests to a distributed system containing at least n number of machines in parallel through the Kubernetes data-plane.
+## Challenges
+1.Tracing ID is a local variabel from an app inside a container, how to let it propagate between containers and nodes?
+
+2.How to make tracing events visible and record them?
+
+## Example
+●	Jaeger: a distributed tracing used for monitoring microservices-based distributed systems.
+Github link: https://github.com/jaegertracing/jaeger
+●	HotRod: a sample application that has had tracing implemented by Jaeger.
+Tutorial link: https://medium.com/opentracing/take-opentracing-for-a-hotrod-ride-f6e3141f7941
 
 ## Release Planning
 Short Term Goals: 
 
-●	Get Kubernetes on our laptops.
+Half of people:
+1) Choose a Kubernetes release that is stable to fork off Github (not off the master branch)
 
-●	Create and run applications in containers
+2) Deploy the stable version in the MOC
 
-●	Implement HotRod using Jaeger. 
+3) Deploy HotROD into the Kubernetes version in our MOC infrastructure
 
-●	Tutorials on Kubernetes and Tracing.
+4) Show that we can collect a trace with Jaeger
+
+
