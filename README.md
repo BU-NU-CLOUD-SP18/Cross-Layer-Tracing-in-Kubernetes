@@ -8,7 +8,7 @@ The aim of this project is to add trace points to applications running in Kubern
 
 What Kubernetes does:
 
-1. It allocates resources to containers to have them meet the required description
+1.It allocates resources to containers to have them meet the required description
 
 2.It offers a unique namespace to each container
 
