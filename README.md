@@ -16,7 +16,13 @@ What Kubernetes does:
 
 4.Provides an abstraction through which each container is able to communicate with the outside world
 
-●	Tracing: Every request has Its own label, we name it as ‘TraceID’. When a specific  request call an API in a components of a system, we can create a event labeled by its ‘TraceID’. By collecting these events, we get a ‘thread’ of movement of  this specific request.
+●	Control plane & Data plane: The decision making part of Kubernetes which decides what has to be done with each containers according to its description. Data Plane is the part which enforces all of control plane’s decisions and it allows applications to remain agnostic to their surroundings.
+
+●	Tracing: Tracing is a method to to understand the performance/correctness of deploying distributed applications.
+
+Three steps of tracing:
+1.Adding trace points to datapath: When app makes a request, it will generate a unique ID for the request we name it as ‘TraceID’. Trace points is like a event triggered When a request calls an API in the component of a system
+By collecting these events, we get a ‘thread’ of movement of  this specific request.
 
 ●	Jaeger: a distributed tracing used for monitoring microservices-based distributed systems.
 
