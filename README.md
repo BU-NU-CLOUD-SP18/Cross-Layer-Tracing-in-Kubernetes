@@ -1,5 +1,5 @@
 # Cross-Layer-Tracing-in-Kubernetes
-The aim of this project is to add trace points to applications running in Kubernetes and understand their behavior by end-to end-tracing.
+The aim of this project is to add trace points to applications running in Kubernetes and understand applications' behavior by end-to end-tracing.
 
 ## Concepts and components of the project
 ●	Container: A container provides an isolated environment with a unique namespace in which an app can run with its environment. The environment satisfies a description of a set of resources required by an app. App can only use the resources defined in this namespace and doesn’t know what is outside its container.
