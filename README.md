@@ -30,11 +30,13 @@ Three steps of tracing:
 
 ●	End to end tracing: End to End (e2e) Tracing is to follow the execution of requests infrastructure along the entirety of its  “PATH” of propagation (including its dataplane), to provide detailed tracing for capacity planning and performance analysis
 
-●	Jaeger: a distributed tracing used for monitoring microservices-based distributed systems.
-
 ●	Services: A microservice; an abstraction which defines a set of Kubernetes pods and a policy to access them.
 
 ●	Ingress: A collection of rules that allow inbound connections to reach the cluster services.
+
+
+
+●	Jaeger: a distributed tracing used for monitoring microservices-based distributed systems.
 
 ●	HotRod: a sample application that has had tracing implemented by Jaeger.
 
@@ -42,14 +44,20 @@ Three steps of tracing:
 
 
 ## Vision & Goals
-We will implement end-to-end tracing for Kubernetes on the data-plane. This includes instrumenting one or more subsystems within the Kubernetes structure.  As data-plane features become a part of the flow and behavior of an application, implementing trace points within them allows for a cross-layer, enabling a complex and deeper understanding of an application’s behavior.  If issues come up in a distributed cluster operated by Kubernetes, tracing is an idea method to resolve said issues.
+We will implement end-to-end tracing for Kubernetes on the data-plane. This includes instrumenting one or more subsystems within the Kubernetes structure. As data-plane features become a part of the flow and behavior of an application, implementing trace points within them allows for a cross-layer, enabling a complex and deeper understanding of an application’s behavior.  If issues come up in a distributed cluster operated by Kubernetes, tracing is an idea method to resolve said issues.
 
-## Users/Personas of the Project
-This project is meant to assist the users of the Kubernetes platform in identifying issues like latency, performance of particular machine, bottlenecks etc.  in their distributed cluster.  Users include large companies, who have made tracing the de facto method to debug and analyze distributed applications.
 
 ## Scope & Features
 We will be instrumenting the services section of Kubernetes with trace points such that we will be able to get information about the behavior of the distributed system as a whole. Specifically we will focus on the data-plane portion of Kubernetes.  The data-plane is the portion of commands which do not focus on the orchestration of deployment tasks, but rather focus on functionalities.
 
+## User story
+1.A developer would be able to debug and analyze their deployed distributed applications.
+
+2.Kubernetes developers can look into which requests are present in a particular data plane at some time T.
+
+3.Performance of a node can be determined.
+
+4.Cloud providers and data centers
 
 ## Acceptance Criteria
 Implement end to end tracing for n number of requests to a distributed system containing at least n number of machines in parallel through the Kubernetes data-plane.
