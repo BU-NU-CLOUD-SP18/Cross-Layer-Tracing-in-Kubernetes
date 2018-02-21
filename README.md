@@ -5,7 +5,9 @@ The aim of this project is to add trace points to applications running in Kubern
 ●	Container: A container provides an isolated environment with a unique namespace in which an app can run with its environment. The environment satisfies a description of a set of resources required by an app. App can only use the resources defined in this namespace and doesn’t know what is outside its container.
 
 ●	Kubernetes: Kubernetes is an orchestration system coordinating a highly available cluster of computers for deploying, scaling and managing containerized components of a distributed application in a datacenter. It makes these applications agnostic and isolated from other containers deployed on the same node e.g. machine. 
+
 What Kubernetes does:
+
 1. It allocates resources to containers to have them meet the required description
 
 2.It offers a unique namespace to each container
