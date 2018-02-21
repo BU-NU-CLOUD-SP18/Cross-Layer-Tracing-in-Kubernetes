@@ -7,8 +7,11 @@ The aim of this project is to add trace points to applications running in Kubern
 ●	Kubernetes: Kubernetes is an orchestration system coordinating a highly available cluster of computers for deploying, scaling and managing containerized components of a distributed application in a datacenter. It makes these applications agnostic and isolated from other containers deployed on the same node e.g. machine. 
 What Kubernetes does:
 1. It allocates resources to containers to have them meet the required description
+
 2.It offers a unique namespace to each container
+
 3.It can scale in & scale out an application and make replication) when required
+
 4.Provides an abstraction through which each container is able to communicate with the outside world
 
 ●	Tracing: Every request has Its own label, we name it as ‘TraceID’. When a specific  request call an API in a components of a system, we can create a event labeled by its ‘TraceID’. By collecting these events, we get a ‘thread’ of movement of  this specific request.
