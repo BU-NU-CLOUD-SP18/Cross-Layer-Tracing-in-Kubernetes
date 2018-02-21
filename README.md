@@ -78,4 +78,4 @@ Half of people:
 
 The other half: 
 
-Looking through the Kubernetes source code and finding the data path for Service calls. If we can find a data path in the code we have to use the Jaeger API to instrument it and then show that the trace appears in the Jaeger interface. This hinges on us being able to deploy the forked version of the code in the MOC
+Looking through the Kubernetes source code and finding the data path for Service calls. If we can find a data path in the code we have to use the Jaeger API to instrument it and then show that the trace appears in the Jaeger interface. This hinges on us being able to deploy the forked version of the code in the MOC.
