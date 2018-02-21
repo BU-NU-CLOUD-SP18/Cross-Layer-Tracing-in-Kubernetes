@@ -1,21 +1,15 @@
 # Cross-Layer-Tracing-in-Kubernetes
 The aim of this project is to add trace points to applications running in Kubernetes and understand their behavior by end-to end-tracing.
 
-## Vision & Goals
-We will implement end-to-end tracing for Kubernetes on the data-plane. This includes instrumenting one or more subsystems within the Kubernetes structure.  As data-plane features become a part of the flow and behavior of an application, implementing trace points within them allows for a cross-layer, enabling a complex and deeper understanding of an application’s behavior.  If issues come up in a distributed cluster operated by Kubernetes, tracing is an idea method to resolve said issues.
+## Concepts and components of the project
+●	Container: A container provides an isolated environment with a unique namespace in which an app can run with its environment. The environment satisfies a description of a set of resources required by an app. App can only use the resources defined in this namespace and doesn’t know what is outside its container.
 
-## Users/Personas of the Project
-This project is meant to assist the users of the Kubernetes platform in identifying issues like latency, performance of particular machine, bottlenecks etc.  in their distributed cluster.  Users include large companies, who have made tracing the de facto method to debug and analyze distributed applications.
-
-## Scope & Features
-We will be instrumenting the services section of Kubernetes with trace points such that we will be able to get information about the behavior of the distributed system as a whole. Specifically we will focus on the data-plane portion of Kubernetes.  The data-plane is the portion of commands which do not focus on the orchestration of deployment tasks, but rather focus on functionalities.
-
-## Solution Concept
-Below are the components of our design:
-
-●	Container: A container provides an isolated environment with a unique namespace in which an app can run with its environment. Apps can only use the resources defined in this namespace.
-
-●	Kubernetes: a container orchestrator, where tracing will be implemented.Kubernetes is an open-source platform designed to automate deploying, scaling, and operating application containers; a container deployment orchestrator.  
+●	Kubernetes: Kubernetes is an orchestration system coordinating a highly available cluster of computers for deploying, scaling and managing containerized components of a distributed application in a datacenter. It makes these applications agnostic and isolated from other containers deployed on the same node e.g. machine. 
+What Kubernetes does:
+1. It allocates resources to containers to have them meet the required description
+2.It offers a unique namespace to each container
+3.It can scale in & scale out an application and make replication) when required
+4.Provides an abstraction through which each container is able to communicate with the outside world
 
 ●	Tracing: Every request has Its own label, we name it as ‘TraceID’. When a specific  request call an API in a components of a system, we can create a event labeled by its ‘TraceID’. By collecting these events, we get a ‘thread’ of movement of  this specific request.
 
@@ -28,6 +22,17 @@ Below are the components of our design:
 ●	HotRod: a sample application that has had tracing implemented by Jaeger.
 
 ●	OSProfiler: Another tracing implementation that may be used.
+
+
+## Vision & Goals
+We will implement end-to-end tracing for Kubernetes on the data-plane. This includes instrumenting one or more subsystems within the Kubernetes structure.  As data-plane features become a part of the flow and behavior of an application, implementing trace points within them allows for a cross-layer, enabling a complex and deeper understanding of an application’s behavior.  If issues come up in a distributed cluster operated by Kubernetes, tracing is an idea method to resolve said issues.
+
+## Users/Personas of the Project
+This project is meant to assist the users of the Kubernetes platform in identifying issues like latency, performance of particular machine, bottlenecks etc.  in their distributed cluster.  Users include large companies, who have made tracing the de facto method to debug and analyze distributed applications.
+
+## Scope & Features
+We will be instrumenting the services section of Kubernetes with trace points such that we will be able to get information about the behavior of the distributed system as a whole. Specifically we will focus on the data-plane portion of Kubernetes.  The data-plane is the portion of commands which do not focus on the orchestration of deployment tasks, but rather focus on functionalities.
+
 
 ## Acceptance Criteria
 Implement end to end tracing for n number of requests to a distributed system containing at least n number of machines in parallel through the Kubernetes data-plane.
