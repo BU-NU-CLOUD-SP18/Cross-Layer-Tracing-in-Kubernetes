@@ -22,9 +22,13 @@ What Kubernetes does:
 
 Three steps of tracing:
 
-1.Adding trace points to datapath:  
+1.Adding trace points to datapath: Let commponents on datapth be 'tracable'. 
 
-2. Tracing ID propagation: By collecting tracing points and sort, we get a ‘thread’ of movement of  this specific request.
+2.Tracing ID propagation: Figure out a method to make sure tracing ID can propagate though layers.
+
+3.Huge repository storage to store tracing information: Massive tracing information will be generated so we need huge storage to hold them.
+
+●	End to end tracing: End to End (e2e) Tracing is to follow the execution of requests infrastructure along the entirety of its  “PATH” of propagation (including its dataplane), to provide detailed tracing for capacity planning and performance analysis
 
 ●	Jaeger: a distributed tracing used for monitoring microservices-based distributed systems.
 
