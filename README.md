@@ -42,13 +42,13 @@ We will implement end-to-end tracing for Kubernetes on the data-plane. This incl
 We will be instrumenting the services section of Kubernetes with trace points such that we will be able to get information about the behavior of the distributed system as a whole. Specifically we will focus on the data-plane portion of Kubernetes.  The data-plane is the portion of commands which do not focus on the orchestration of deployment tasks, but rather focus on functionalities.
 
 ## User story
-1.A developer would be able to debug and analyze their deployed distributed applications.
+●	A developer would be able to debug and analyze their deployed distributed applications.
 
-2.Kubernetes developers can look into which requests are present in a particular data plane at some time T.
+●	Kubernetes developers can look into which requests are present in a particular data plane at some time T.
 
-3.Performance of a node can be determined.
+●	Performance of a node can be determined.
 
-4.Cloud providers and data centers
+●	Cloud providers and data centers
 
 ## Challenges
 1.Tracing ID is a local variabel from an app inside a container, how to let it propagate between containers and nodes?
@@ -57,8 +57,11 @@ We will be instrumenting the services section of Kubernetes with trace points su
 
 ## Example
 ●	Jaeger: a distributed tracing used for monitoring microservices-based distributed systems.
+
 Github link: https://github.com/jaegertracing/jaeger
+
 ●	HotRod: a sample application that has had tracing implemented by Jaeger.
+
 Tutorial link: https://medium.com/opentracing/take-opentracing-for-a-hotrod-ride-f6e3141f7941
 
 ## Release Planning
@@ -73,4 +76,6 @@ Half of people:
 
 4) Show that we can collect a trace with Jaeger
 
+The other half: 
 
+Looking through the Kubernetes source code and finding the data path for Service calls. If we can find a data path in the code we have to use the Jaeger API to instrument it and then show that the trace appears in the Jaeger interface. This hinges on us being able to deploy the forked version of the code in the MOC
