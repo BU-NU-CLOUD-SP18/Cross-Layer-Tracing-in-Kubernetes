@@ -1,4 +1,4 @@
-Step 0: Creating SSH keys(for Linux&macOS)
+# Step 0: Creating SSH keys(for Linux&macOS)
 
 (1)Open a terminal and run:
 
@@ -24,7 +24,7 @@ Step 0: Creating SSH keys(for Linux&macOS)
 
 
 
-Step 1: Create an instance
+# Step 1: Create an instance
 
 (1)Log into MOC, go to instance under compute tag, choose "launch instance".
 
@@ -35,7 +35,8 @@ Step 1: Create an instance
    Follow the steps, and choose "launch instance". 
 
 
-Step 2: Create a cluster
+
+# Step 2: Create a cluster
 
 (1)Log into your new instance using the command:
 
