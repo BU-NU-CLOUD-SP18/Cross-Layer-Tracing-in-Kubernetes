@@ -6,17 +6,17 @@
 
    If this directory dose not exist, skip (2).
 
-(3)Check if you have a key already:
+(2)Check if you have a key already:
 
 	ls id_*
 
    If you have already had a key, skip instruction below.
 
-(4)If not, create a new key: 
+(3)If not, create a new key: 
 
 	ssh-keygen -t rsa -C "your_email@example.com"
 
-(5)After seeing a response, press <enter> to accept the default location and file name.
+(4)After seeing a response, press <enter> to accept the default location and file name.
  
    Enter, and re-enter, a passphrase when prompted.
 
