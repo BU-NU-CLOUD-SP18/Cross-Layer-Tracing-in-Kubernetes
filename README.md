@@ -1,7 +1,7 @@
 # Cross-Layer-Tracing-in-Kubernetes
 The aim of this project is to add trace points to applications running in Kubernetes and understand applications' behavior by end-to-end tracing.
 
-# Change in plan
+## Change in plan
 As we find that Nginx takes response of Kubernetes external traffic, Our MVP changes to tracing Nginx with Jaeger. 
 
 ## See instructions of the project here:
