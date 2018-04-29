@@ -10,8 +10,7 @@ In command line:
 	sudo passwd
 
 	setenforce 0
-	sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
-reboot
+	sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinu reboot
 
 
 Master configuration:
