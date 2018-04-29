@@ -1,6 +1,9 @@
 # Cross-Layer-Tracing-in-Kubernetes
 The aim of this project is to add trace points to applications running in Kubernetes and understand applications' behavior by end-to-end tracing.
 
+# Change in plan
+As we find that Nginx takes response of Kubernetes external traffic, Our MVP changes to tracing Nginx with Jaeger. 
+
 ## See instructions of the project here:
 1. Create a cluster on MOC: https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/instructions/Instruction%20of%20create%20a%20cluster%20on%20moc.md
 2. Deploy Kubernetes on MOC cluster: https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/instructions/Instruction%20of%20install%20Kubernetes%20on%20MOC.md
