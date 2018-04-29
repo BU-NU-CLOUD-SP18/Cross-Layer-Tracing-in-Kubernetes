@@ -6,6 +6,7 @@ The aim of this project is to add trace points to applications running in Kubern
 2. Deploy Kubernetes on MOC cluster: https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/instructions/Instruction%20of%20install%20Kubernetes%20on%20MOC.md
 3. Set up Jaeger on MOC instance and show GUI on local computer: https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/instructions/Install%20Jaeger%20on%20MOC%20node.md
 4. HotRod: an Jaeger tracing example: https://github.com/jaegertracing/jaeger/tree/master/examples/hotrod
+5. Kubernetes logging: https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/instructions/Kubernetes%20logging.md
 
 
 ## Concepts and components of the project
