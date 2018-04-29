@@ -8,9 +8,8 @@ As we find that Nginx takes response of Kubernetes external traffic, Our MVP cha
 1. Create a cluster on MOC: https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/instructions/Instruction%20of%20create%20a%20cluster%20on%20moc.md
 2. Deploy Kubernetes on MOC cluster: https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/instructions/Instruction%20of%20install%20Kubernetes%20on%20MOC.md
 3. Set up Jaeger on MOC instance and show GUI on local computer: https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/instructions/Install%20Jaeger%20on%20MOC%20node.md
-4. HotRod: an Jaeger tracing example: https://github.com/jaegertracing/jaeger/tree/master/examples/hotrod
-5. Kubernetes logging: https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/instructions/Kubernetes%20logging.md
-6. Containerize an application and make it a service in Kubernetes cluster: https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/instructions/Containerize%20an%20application%20and%20make%20it%20a%20service.md%20on%20MOC%20cluster.md
+4. Kubernetes logging: https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/instructions/Kubernetes%20logging.md
+5. Containerize an application and make it a service in Kubernetes cluster: https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/instructions/Containerize%20an%20application%20and%20make%20it%20a%20service.md%20on%20MOC%20cluster.md
 
 
 ## Concepts and components of the project
