@@ -121,6 +121,7 @@ Worker configuration:
 	systemctl restart docker && systemctl enable docker
 
  cluster 2:
+	
 	kubeadm join --token e83d68.56fef47fa86febae 192.168.0.18:6443 --discovery-token-ca-cert-hash sha256:6c5ba92acda7b5f4b629d808633e8ebfa7fb9cecec2c09d9d1e0e877fe8d0050
 
  Cluster 3:
