@@ -18,8 +18,10 @@ As we find that Nginx takes response of Kubernetes external traffic, Our MVP cha
 ●	Open tracing: Since developers and engineers have started to trade in the old monolithic systems for today’s microservice architectures tasks that were easy before have become difficult. Modern day distributed tracing systems aim to address these issues but they do so using application level instrumentation using incompatible APIs. Open Tracing aims to address these issues using consistent, vendor neutral APIs for popular platforms.
 
 ●	Jaeger: Jaeger is a distributed tracing system released as open source by Uber Technologies. It can be used for monitoring microservices-based distributed systems. Jaeger backend, Web UI, and instrumentation libraries have been designed from ground up to support the OpenTracing standard.
-        Jaeger tracing example
-        HotRod: a sample application that has had tracing implemented by Jaeger.
+
+   Jaeger tracing example
+        
+   HotRod: a sample application that has had tracing implemented by Jaeger.
         Tutorial link: https://medium.com/opentracing/take-opentracing-for-a-hotrod-ride-f6e3141f7941
         ![alt text](https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/images/screen_shot_2018-04-29_at_10.42.08_pm.png)
         ![alt text](https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/images/Screen%20Shot%202018-04-29%20at%2010.43.02%20PM.png)
