@@ -82,11 +82,9 @@ An Ingress is a collection of rules that allow inbound connections to reach the 
 ●  Ingress controller: An Ingress Controller is a daemon, deployed as a Kubernetes Pod, that watches the apiserver's /ingresses endpoint for updates to the Ingress resource. Its job is to satisfy requests for Ingresses. You can choose any load balancer that provides an Ingress controller, which is software you deploy in your cluster to integrate Kubernetes and the load balancer.
 
 ●  Niginx is a chooseable http headers load balancer for Kubernetes. It take response of Kubernetes external traffic. So this is where we are going to add tracing points.
+  
    From NGINX website: 
    NGINX is a free, open-source, high-performance HTTP server and reverse proxy, as well as a proxy server. NGINX is known for its high performance, stability, rich feature set, simple configuration, and low resource consumption.
-
-
-
 
 ## Vision & Goals
 We will implement end-to-end tracing for Kubernetes on the data-plane. This includes instrumenting one or more subsystems within the Kubernetes structure. As data-plane features become a part of the flow and behavior of an application, implementing trace points within them allows for a cross-layer, enabling a complex and deeper understanding of an application’s behavior.  If issues come up in a distributed cluster operated by Kubernetes, tracing is an idea method to resolve said issues.
