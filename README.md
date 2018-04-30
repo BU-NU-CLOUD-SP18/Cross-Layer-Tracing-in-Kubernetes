@@ -16,6 +16,14 @@ As we find that Nginx takes response of Kubernetes external traffic, Our MVP cha
 ●	Tracing: Tracing is a method to understand the performance/correctness of deploying distributed applications. When an app makes a request, it will generate a unique request ID and we name it as ‘Traceing ID’. Tracing ID propagate through the system with the request. Every time the request calls a component of the system, an event labeled by request's tracing ID is triggered. If we collect all the events and sort them into different requests by tracing ID, we will see series of events like 'threads' belongs to different requests, from which we can understand apps' behavior.
 
 ●	Open tracing: Since developers and engineers have started to trade in the old monolithic systems for today’s microservice architectures tasks that were easy before have become difficult. Modern day distributed tracing systems aim to address these issues but they do so using application level instrumentation using incompatible APIs. Open Tracing aims to address these issues using consistent, vendor neutral APIs for popular platforms.
+        
+        ** Jaeger tracing example
+        HotRod: a sample application that has had tracing implemented by Jaeger.
+        Tutorial link: https://medium.com/opentracing/take-opentracing-for-a-hotrod-ride-f6e3141f7941
+        ![alt text](https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/images/screen_shot_2018-04-29_at_10.42.08_pm.png)
+        ![alt text](https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/images/Screen%20Shot%202018-04-29%20at%2010.43.02%20PM.png)
+
+●	Jaeger: Jaeger is a distributed tracing system released as open source by Uber Technologies. It can be used for monitoring microservices-based distributed systems. Jaeger backend, Web UI, and instrumentation libraries have been designed from ground up to support the OpenTracing standard.
 
 ●	Distributed system: A distributed system is a network that consists of autonomous computers that are connected using a distribution middleware. They help in sharing different resources and capabilities to provide users with a single and integrated coherent network. The computers interact with each other in order to achieve a common goal.
 
@@ -81,9 +89,6 @@ tracing Nginx
 
 ● Configure Nginx to add tracing points.
 
-## Jaeger tracing example
-●	HotRod: a sample application that has had tracing implemented by Jaeger.
 
-Tutorial link: https://medium.com/opentracing/take-opentracing-for-a-hotrod-ride-f6e3141f7941
 
 
