@@ -62,6 +62,14 @@ What Kubernetes does:
                                                      ------------
                                                      [ Services ]
 
+An Ingress is a collection of rules that allow inbound connections to reach the cluster services.
+
+                                                        Internet
+                                                           |
+                                                      [ Ingress ]
+                                                      --|-----|--
+                                                      [ Services ]
+
 ●	Control plane: The Control Plane maintains a record of all of the Kubernetes Objects in the system, and runs continuous control loops to manage those objects’ state. At any given time, the Control Plane’s control loops will respond to changes in the cluster and work to make the actual state of all the objects in the system match the desired state that you provided.
 
 ● Data plane: The decision making part of Kubernetes which decides what has to be done with each containers according to its description. Data Plane is the part which enforces all of control plane’s decisions and it allows applications to remain agnostic to their surroundings.
