@@ -12,14 +12,19 @@ Tracing Nginx with Jaeger.
 
 ## Project phases
 ●	Pre 1: Understand tracing(Read papers), get familiar with Kubernetes and MOC(Create cluster).
+https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/pre%201.pdf
 
 ●	Pre 2: Explore a one node cluster(Minikube) locally(logging).
+https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/pre%202.pdf
 
 ●  Pre 3: Figure out Kubernetes datapath(Internal: OVS, External: Nginx).
+https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/e2e%20tracing%20pre%203.pptx.pdf
 
 ●  Pre 4: Figure out where to add trace points(Look inside Kubernetes source code, Nginx source code).
+https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/pre%204.pdf
 
 ●  Pre 5: Figure out how to add these trace points(Open tracing framework, recomple Jaeger into C++).
+https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/pre%205.pptx
 
 
 ## Instructions of the project:
@@ -27,7 +32,7 @@ Tracing Nginx with Jaeger.
 2. Deploy Kubernetes on MOC cluster: https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/instructions/Instruction%20of%20install%20Kubernetes%20on%20MOC.md
 3. Set up Jaeger on MOC instance and show GUI on local computer: https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/instructions/Install%20Jaeger%20on%20MOC%20node.md
 4. Kubernetes logging: https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/instructions/Kubernetes%20logging.md
-5. Containerize an application and make it a service in Kubernetes cluster: https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/instructions/Containerize%20an%20application%20and%20make%20it%20a%20service.md%20on%20MOC%20cluster.md
+5. Containerize an application and make it a service in Kubernetes cluster: https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/pre%205.pdf
 
 ## Concepts and components of the project
 ●	Tracing: Tracing is a method to understand the performance/correctness of deploying distributed applications. When an app makes a request, it will generate a unique request ID and we name it as ‘Traceing ID’. Tracing ID propagate through the system with the request. Every time the request calls a component of the system, an event labeled by request's tracing ID is triggered. If we collect all the events and sort them into different requests by tracing ID, we will see series of events like 'threads' belongs to different requests, from which we can understand apps' behavior.
