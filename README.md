@@ -7,6 +7,21 @@ As we find that Nginx takes response of Kubernetes external traffic, Our MVP cha
 ## Vision & Goals
 We will implement end-to-end tracing for Kubernetes on the data-plane. This includes instrumenting one or more subsystems within the Kubernetes structure. As data-plane features become a part of the flow and behavior of an application, implementing trace points within them allows for a cross-layer, enabling a complex and deeper understanding of Kubernetes behavior.  If issues come up in a distributed cluster operated by Kubernetes, tracing is an idea method to resolve said issues.
 
+## MVP
+Tracing Nginx with Jaeger.
+
+## Project phases
+●	Pre 1: Understand tracing(Read papers), get familiar with Kubernetes and MOC(Create cluster).
+
+●	Pre 2: Explore a one node cluster(Minikube) locally(logging).
+
+●  Pre 3: Figure out Kubernetes datapath(Internal: OVS, External: Nginx).
+
+●  Pre 4: Figure out where to add trace points(Look inside Kubernetes source code, Nginx source code).
+
+●  Pre 5: Figure out how to add these trace points(Open tracing framework, recomple Jaeger into C++).
+
+
 ## Instructions of the project:
 1. Create a cluster on MOC: https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/instructions/Instruction%20of%20create%20a%20cluster%20on%20moc.md
 2. Deploy Kubernetes on MOC cluster: https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/instructions/Instruction%20of%20install%20Kubernetes%20on%20MOC.md
@@ -88,24 +103,15 @@ An Ingress is a collection of rules that allow inbound connections to reach the 
    From NGINX website: 
    NGINX is a free, open-source, high-performance HTTP server and reverse proxy, as well as a proxy server. NGINX is known for its high performance, stability, rich feature set, simple configuration, and low resource consumption.
 
-
 ## User story
-### MVP
-tracing Nginx 
-### User story
-●	A developer would be able to debug and analyze their deployed distributed applications.
+●	Tracing OVS.
 
-●	Kubernetes developers can look into which requests are present in a particular data plane at some time T.
+●	Tracing Kubernetes data plane.
 
-●	Performance of a node can be determined.
+●	Tracing Kubernetes control plane.
 
-●	Cloud providers and data centers
+●	Tracing application running in Kubernetes, on MOC.
 
-## Challenges
-● Figure out Kubernetes datapath.
+●	Compare the Kubernetes tracing and application tracing, have a deeper understand of Kubernetes behavior.
 
-● Configure Nginx to add tracing points.
-
-
-
-
+●	Collect performance matrices, such as latency and bottlenecks.
