@@ -15,6 +15,14 @@ As we find that Nginx takes response of Kubernetes external traffic, Our MVP cha
 ## Concepts and components of the project
 ●	Tracing: Tracing is a method to understand the performance/correctness of deploying distributed applications. When an app makes a request, it will generate a unique request ID and we name it as ‘Traceing ID’. Tracing ID propagate through the system with the request. Every time the request calls a component of the system, an event labeled by request's tracing ID is triggered. If we collect all the events and sort them into different requests by tracing ID, we will see series of events like 'threads' belongs to different requests, from which we can understand apps' behavior.
 
+Three steps of tracing:
+
+1.Adding trace points to datapath: Let commponents on datapth be 'tracable'. 
+
+2.Tracing ID propagation: Figure out a method to make sure tracing ID can propagate though layers.
+
+3.Huge repository storage to store tracing information: Massive tracing information will be generated so we need huge storage to hold them.
+
 ●	Open tracing: Since developers and engineers have started to trade in the old monolithic systems for today’s microservice architectures tasks that were easy before have become difficult. Modern day distributed tracing systems aim to address these issues but they do so using application level instrumentation using incompatible APIs. Open Tracing aims to address these issues using consistent, vendor neutral APIs for popular platforms.
 
 ●	Jaeger: Jaeger is a distributed tracing system released as open source by Uber Technologies. It can be used for monitoring microservices-based distributed systems. Jaeger backend, Web UI, and instrumentation libraries have been designed from ground up to support the OpenTracing standard.
@@ -33,10 +41,6 @@ As we find that Nginx takes response of Kubernetes external traffic, Our MVP cha
 ![alt text](https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/images/kube%20arch.png)
 ![alt text](https://github.com/BU-NU-CLOUD-SP18/Cross-Layer-Tracing-in-Kubernetes/blob/master/images/kube%20arch2.png)
 
-●	Container: A container provides an isolated environment with a unique namespace in which an app can run with its environment. The environment satisfies a description of a set of resources required by an app. App can only use the resources defined in this namespace and doesn’t know what is outside its container.
-
-
-
 What Kubernetes does:
 
 1.It allocates resources to containers to have them meet the required description
@@ -47,18 +51,11 @@ What Kubernetes does:
 
 4.Provides an abstraction through which each container is able to communicate with the outside world
 
+●	Container: A container provides an isolated environment with a unique namespace in which an app can run with its environment. The environment satisfies a description of a set of resources required by an app. App can only use the resources defined in this namespace and doesn’t know what is outside its container.
+
 ●	Control plane: The Control Plane maintains a record of all of the Kubernetes Objects in the system, and runs continuous control loops to manage those objects’ state. At any given time, the Control Plane’s control loops will respond to changes in the cluster and work to make the actual state of all the objects in the system match the desired state that you provided.
 
 ● Data plane: The decision making part of Kubernetes which decides what has to be done with each containers according to its description. Data Plane is the part which enforces all of control plane’s decisions and it allows applications to remain agnostic to their surroundings.
-
-
-Three steps of tracing:
-
-1.Adding trace points to datapath: Let commponents on datapth be 'tracable'. 
-
-2.Tracing ID propagation: Figure out a method to make sure tracing ID can propagate though layers.
-
-3.Huge repository storage to store tracing information: Massive tracing information will be generated so we need huge storage to hold them.
 
 ●	End to end tracing: End to End (e2e) Tracing is to follow the execution of requests infrastructure along the entirety of its  “PATH” of propagation (including its dataplane), to provide detailed tracing for capacity planning and performance analysis
 
